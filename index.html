@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Ethereal Zue!</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffdde1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+		
+		#countdown {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .time {
+            font-size: 2em;
+            margin: 0 10px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header Styles */
+        h1 {
+            font-size: 3rem;
+            color: #ff6699;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #ff6699;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #cc3366;
+        }
+
+        /* Sections Styles */
+        .section {
+            display: none;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: slideIn 1s ease-out;
+            overflow-y: auto; /* Added for scrollable content */
+            max-height: 70vh; /* Added max-height to limit scrolling */
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #ff6699;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        /* Canvas Styles */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 90%;
+            pointer-events: none;
+            z-index: -3;
+        }
+
+	#birthdayVideo {
+   	 max-width: 100%;
+    	height: auto;
+	}
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .section {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown to Your Birthday!!</h1>
+        <p class="message">Please don't put high expectation. This is just a simple one cuz I made it in hurry ❤️</p>
+		<div id="countdown">
+            <div class="time" id="days"></div>
+            <div class="time" id="hours"></div>
+            <div class="time" id="minutes"></div>
+            <div class="time" id="seconds"></div>
+        </div>
+		<button id="confettiButton" disabled>Celebrate 🎊</button>
+    </div>
+
+    <div class="section" id="wishCardSection">
+        <h2>Birthday Wishes 🌟</h2>
+        <p>Hello.. Hello… I’m finally back with my sweet personality~ And I hope this wishes find you well.</p>
+        <p>Here i would like to wish a Happy birthday to my fav precious soul, Zuwairiyyah!! 😚🫶🏼</p>
+        <p>You’re officially 23 now! I'm not sure where to start since there are so many I want to say. But I guess I'll begin with thank you from the bottom of my heart. Time surely flies so fast and there are no words that can fully express how much you and your presence meant to me. You know what, you’ve always been such a precious and beautiful soul, inside and out. Your kindness, strength and positivity always inspire me every day. I hope everything goes well and you’re always in a good shape of health 🥺❤️</p>
+        <p>I also noticed that we have been out of touch lately, yea probably due to our own commitments, but again, I'm so glad to see how the friendship is still there. I've always remember you in everything I do and I really hope that we can arrange a simple catch-up date soon!! Also, I really wish that you could find a constant of strength and light whenever world treats you badly, overwhelmed by the darkness that seem impossible to escape. I also hope that the weight of adult life didn't scare you and make you lose yourself, instead it gives you courage to reconnect and recognise yourself in ways that you never thought possible</p>
+		<p>Also, just in case no one has told you this, from my perspective, you're actually someone that has so much love to give and it's actually evident in everything you do! It's the way you care about others, the way you cherish your surroundings, and the way you always pour your heart into everything. All that actually shown me that there's so much beauty in loving others and I'm ready to embrace that. I guess I learned a lot from you and I just want you to know, you're someone that I admire a lot, not just because you're my friend or someone that I've been spending almost all my life with, but for the way you actually are ❤️</p>
+		<p>Hmmm, I also hope that people around you can inspire you to be the best version of you and vice versa. I wish someday, or later, I could actually give you a long warm hug because you always deserve that!! And I also wish that I could cook you something delicious at least once a year or on your birthday. Why? Because everyone deserve to eat a good food on their birthday. On the other notes, I deeply hope that you know I'm always so proud of everything you do. I pray that you're able to find your own happiness, continue to be surrounded by love and warmth in everything you do or choose 🙌🏼</p>
+		<p>Zuee, please continue to shine as brightly as you always did, and I'll always be here cheering for you. And I'll forever be so grateful to have you in my life, to be able to find comfort whenever I'm talking to you 🫧 To me, you're like the warmth of the home on a rainy day that are safe, soothing and people can look forward to. And you really deserve the happiness, health and endless success!! 🫶🏼</p>
+        <p>Also, i couldn’t thank you enough for everything you’ve done for me both small or big one!! 🫧 thank you for always be there in every chapters of my life. I pray that your mental health will keep on improving day by day to the point that you no longer afraid of what others would say about you 🤚🏼 live freely cause you’re the main character of your life!!  Thank you for providing me a safe space, for having my back and reaching out your hands when things are too tough for me to handle 🥺🫧 I swear you helped me a lot 🙌🏼 You also deserve all the comfort and convenience as you embark ok this new chapter of your life ❤️</p>
+        <p>I wish you the best in everything you do, especially with your study and your dream job! 😊 And if you ask me 100 reasons why I like being friend with you, My answer would start with 1. Because you're Zuwairiyyah and end with 100. Because you're simply just you, Zuwairiyyah. Wahh, panjang pulak HAHHAHAHAHHA. Okay.. Last ehhh.. You know, I may never find words that are beautiful enough to describe all that you mean to me, but this time I promise I'll spend the rest of my life searching for them  😚🫶🏼</p>
+	<p>So, on this special day, i want you to celebrate yourself and all that you’ve accomplished!! Though I've said this earlier, but again, I'll always so proud of you in whatever you did!! You too have come so far, and there’s so much more greatness ahead of you!! 🥰 Do enjoy your day to the fullest, surrounded by those who love and appreciate you!! 😘🫧 inshaAllah, later kita jumpa okay!! See you when i see you!! I love you and thank you for being my favourite people 🫧</p>
+    </div>
+
+<div class="section" id="videoSection">
+    <h2>Special Birthday Video 🎥</h2>
+	<p>My girl, it's really a sign for us to hang up cuz I've already ran out of your pictures and videos</p>
+    <video id="birthdayVideo" controls style="width: 70%; max-width: 600px; height: auto;">
+        <source src="video/zue.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+    <canvas id="confettiCanvas"></canvas>
+    <canvas id="cakeCanvas"></canvas>
+
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="song/svt.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+	        const countdownDate = new Date('2025-04-24T19:22:00').getTime(); // Set your target date here
+	
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = `${days}d`;
+            document.getElementById('hours').innerText = `${hours}h`;
+            document.getElementById('minutes').innerText = `${minutes}m`;
+            document.getElementById('seconds').innerText = `${seconds}s`;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = "<h2>Happy Birthday, Zue Sayanggg! 🎉</h2>";
+                document.getElementById('confettiButton').disabled = false;
+                document.getElementById('confettiButton').classList.add('enabled');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+		
+        const button = document.getElementById('confettiButton');
+        const confettiCanvas = document.getElementById('confettiCanvas');
+        const confettiContext = confettiCanvas.getContext('2d');
+        const cakeCanvas = document.getElementById('cakeCanvas');
+        const cakeContext = cakeCanvas.getContext('2d');
+        const sections = document.querySelectorAll('.section');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const birthdayVideo = document.getElementById('birthdayVideo');
+
+
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+        cakeCanvas.width = window.innerWidth;
+        cakeCanvas.height = window.innerHeight;
+
+        let confettiArray = [];
+        let cakeArray = [];
+
+        button.addEventListener('click', () => {
+            sections.forEach(section => section.style.display = 'block'); // Show all sections
+            createConfetti();
+            createCakes();
+            animateConfettiAndCakes();
+            playBackgroundMusic();
+        });
+
+        // Pause background music when video starts playing
+        birthdayVideo.addEventListener('play', () => {
+            pauseBackgroundMusic();
+        });
+
+        // Resume background music when video pauses
+        birthdayVideo.addEventListener('pause', () => {
+            playBackgroundMusic();
+        });
+
+        // Resume background music when video ends
+        birthdayVideo.addEventListener('ended', () => {
+            playBackgroundMusic();
+        });
+
+        function createConfetti() {
+            confettiArray = [];
+            for (let i = 0; i < 100; i++) {
+                confettiArray.push({
+                    x: Math.random() * confettiCanvas.width,
+                    y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                    r: Math.random() * 6 + 4,
+                    d: Math.random() * 20 + 15,
+                    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+                    tilt: Math.random() * 10 - 10,
+                    tiltAngleIncrement: Math.random() * 0.07 + 0.05,
+                    tiltAngle: 0
+                });
+            }
+        }
+
+        function createCakes() {
+            cakeArray = [];
+            for (let i = 0; i < 5; i++) {
+                cakeArray.push({
+                    x: Math.random() * cakeCanvas.width,
+                    y: cakeCanvas.height + Math.random() * cakeCanvas.height,
+                    size: Math.random() * 60 + 60,
+                    color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                    speed: Math.random() * 3 + 1
+                });
+            }
+        }
+
+        function drawConfetti() {
+            confettiContext.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            confettiArray.forEach((confetti, index) => {
+                confetti.tiltAngle += confetti.tiltAngleIncrement;
+                confetti.y += (Math.cos(confetti.d) + 1 + confetti.r / 2) / 2;
+                confetti.tilt = Math.sin(confetti.tiltAngle - index / 3) * 15;
+
+                if (confetti.y > confettiCanvas.height) {
+                    confettiArray[index] = {
+                        x: Math.random() * confettiCanvas.width,
+                        y: -confettiCanvas.height,
+                        r: confetti.r,
+                        d: confetti.d,
+                        color: confetti.color,
+                        tilt: confetti.tilt,
+                        tiltAngleIncrement: confetti.tiltAngleIncrement,
+                        tiltAngle: confetti.tiltAngle
+                    };
+                }
+
+                confettiContext.beginPath();
+                confettiContext.lineWidth = confetti.r / 2;
+                confettiContext.strokeStyle = confetti.color;
+                confettiContext.moveTo(confetti.x + confetti.tilt + confetti.r / 4, confetti.y);
+                confettiContext.lineTo(confetti.x + confetti.tilt, confetti.y + confetti.tilt + confetti.r / 4);
+                confettiContext.stroke();
+            });
+        }
+
+        function drawCakes() {
+            cakeContext.clearRect(0, 0, cakeCanvas.width, cakeCanvas.height);
+            cakeArray.forEach((cake, index) => {
+                cake.y -= cake.speed;
+
+                if (cake.y < -cake.size) {
+                    cakeArray[index] = {
+                        x: Math.random() * cakeCanvas.width,
+                        y: cakeCanvas.height + Math.random() * cakeCanvas.height,
+                        size: cake.size,
+                        color: cake.color,
+                        speed: Math.random() * 3 + 1
+                    };
+                }
+
+                cakeContext.beginPath();
+                cakeContext.arc(cake.x, cake.y, cake.size, 0, Math.PI * 2);
+                cakeContext.fillStyle = cake.color;
+                cakeContext.fill();
+            });
+        }
+
+        function animateConfettiAndCakes() {
+            drawConfetti();
+            drawCakes();
+            requestAnimationFrame(animateConfettiAndCakes);
+        }
+
+        function playBackgroundMusic() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+            }
+        }
+
+        function pauseBackgroundMusic() {
+            if (!backgroundMusic.paused) {
+                backgroundMusic.pause();
+            }
+        }
+
+        // Adjust canvas size on window resize
+        window.addEventListener('resize', () => {
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+            cakeCanvas.width = window.innerWidth;
+            cakeCanvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
